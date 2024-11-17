@@ -1,5 +1,5 @@
-from televisores.marca import Marca
-from televisores.control import Control
+from marca import Marca
+from control import Control
 
 class TV:
     _numTV = 0
@@ -10,8 +10,8 @@ class TV:
         self._canal: int = 1
         self._precio: int = 500
         self._volumen: int = 1
-        self._control: Control
-        self.tvCreados()
+        self._control: Control = None
+        TV.tvCreados()
 
     @classmethod
     def tvCreados(cls):
