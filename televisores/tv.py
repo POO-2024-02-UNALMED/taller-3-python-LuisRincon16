@@ -2,7 +2,7 @@ from marca import Marca
 from control import Control
 
 class TV:
-    numTV = 0
+    _numTV = 0
 
     def __init__(self, marca, estado):
         self._marca: Marca = marca
@@ -15,16 +15,32 @@ class TV:
 
     @classmethod
     def tvCreados(cls):
-        cls.numTV = cls.numTV + 1
+        cls._numTV = cls._numTV + 1
 
     def turnOn(self):
-        self.estado = True
+        self._estado = True
 
     def turnOff(self):
-        self.estado = False
+        self._estado = False
 
     def getEstado(self):
-        return self.estado
+        return self._estado
+                                    #subir o bajar canales
+    def canalUp(self):
+        cana = self._canal + 1
+        self.setCanal(cana)
+    
+    def canalDown(self):
+        cana = self._canal - 1
+        self.setCanal(cana)
+                                        #subir o bajar volumen
+    def volumenUp(self):
+        vol = self._volumen + 1
+        self.setVolumen(vol)
+
+    def volumenDown(self):
+        vol = self.volumen - 1
+        self.setVolumen(vol)
 
     def setMarca(self, marc: Marca):
         self._marca = marc
@@ -32,7 +48,9 @@ class TV:
         return self._marca
 
     def setCanal(self, can):
-        self._canal = can
+        if self._estado == True and can >= 1 and can <= 120:
+            self.canal = can
+        
     def getCanal(self):
         return self._canal
         
@@ -42,7 +60,9 @@ class TV:
         return self._precio
         
     def setVolumen(self, vol):
-        self._volumen = vol
+        if self._estado == True and vol >= 0 and vol <= 7:
+            self._volumen = vol
+
     def getVolumen(self):
         return self._volumen
         
