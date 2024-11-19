@@ -5,13 +5,17 @@ from __future__ import annotations
 class TV:
     _numTV = 0
     def __init__(self, marca: Marca, estado: bool):
-        self._marca = marca
+        self._marca: Marca = marca
         self._estado = estado
         self._canal = 1
         self._precio = 500
         self._volumen = 1
         self._control: Control = None
         TV.tvCreados()
+
+    @classmethod
+    def setNumTv(cls, numTeles):
+        cls._numTV = numTeles
 
     @classmethod
     def tvCreados(cls):
