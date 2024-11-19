@@ -16,6 +16,7 @@ class TV:
     @classmethod
     def setNumTv(cls, numTeles):
         cls._numTV = numTeles
+        
 
     @classmethod
     def tvCreados(cls):
