@@ -3,7 +3,7 @@
 
 class TV:
     _numTV = 0
-    def __init__(self, marca: Marca, estado: bool):
+    def __init__(self, marca, estado: bool):
         self._marca = marca
         self._estado = estado
         self._canal = 1
