@@ -10,7 +10,7 @@ class TV:
         self._precio = 500
         self._volumen = 1
         self._control = None
-        TV._numTV = TV._numTV + 1
+        TV.setNumTV(TV._numTV + 1)
 
     @classmethod
     def setNumTV(cls, numTeles):
