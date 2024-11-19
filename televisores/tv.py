@@ -5,12 +5,12 @@ from __future__ import annotations
 class TV:
     _numTV = 0
     def __init__(self, marca: Marca, estado: bool):
-        self._marca: Marca = marca
+        self._marca = marca
         self._estado = estado
         self._canal = 1
         self._precio = 500
         self._volumen = 1
-        self._control: Control = None
+        self._control = None
         TV._numTV = TV._numTV + 1
 
     @classmethod
