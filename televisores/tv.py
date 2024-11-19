@@ -1,9 +1,10 @@
 #from televisores.marca import Marca
 #from televisores.control import Control
+from __future__ import annotations
 
 class TV:
     _numTV = 0
-    def __init__(self, marca, estado: bool):
+    def __init__(self, marca: Marca, estado: bool):
         self._marca = marca
         self._estado = estado
         self._canal = 1

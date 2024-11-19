@@ -1,4 +1,5 @@
 #from televisores.tv import TV
+from __future__ import annotations
 
 class Control:
     def __init__(self):
