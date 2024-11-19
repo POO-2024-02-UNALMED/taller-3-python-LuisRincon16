@@ -1,12 +1,11 @@
-#from televisores.marca import Marca
-#from televisores.control import Control
+
 from __future__ import annotations
 
 class TV:
     _numTV = 0
     def __init__(self, marca: Marca, estado: bool):
-        self._marca = marca
-        self._estado = estado
+        self._marca: Marca = marca
+        self._estado: bool = estado
         self._canal = 1
         self._precio = 500
         self._volumen = 1
@@ -14,7 +13,7 @@ class TV:
         TV._numTV = TV._numTV + 1
 
     @classmethod
-    def setNumTV(cls, numTeles: int):
+    def setNumTV(cls, numTeles):
         cls._numTV = numTeles
 
     @classmethod
@@ -46,9 +45,9 @@ class TV:
         vol = self._volumen - 1
         self.setVolumen(vol)
 
-    def setMarca(self, marca: Marca):
-        self._marca = marca
-    def getMarca(self) -> Marca:
+    def setMarca(self, marc: Marca):
+        self._marca = marc
+    def getMarca(self):
         return self._marca
 
     def setCanal(self, can):
@@ -72,6 +71,6 @@ class TV:
         
     def setControl(self, control: Control):
         self._control = control
-    def getControl(self) -> Control:
+    def getControl(self):
         return self._control
     
