@@ -3,12 +3,12 @@
 
 class TV:
     _numTV = 0
-    def __init__(self, marca, estado):
-        self._marca: Marca = marca
-        self._estado: bool = estado
-        self._canal: int = 1
-        self._precio: int = 500
-        self._volumen: int = 1
+    def __init__(self, marca: Marca, estado: bool):
+        self._marca = marca
+        self._estado = estado
+        self._canal = 1
+        self._precio = 500
+        self._volumen = 1
         self._control: Control = None
         TV.tvCreados()
 
@@ -43,7 +43,7 @@ class TV:
 
     def setMarca(self, marc: Marca):
         self._marca = marc
-    def getMarca(self):
+    def getMarca(self) -> Marca:
         return self._marca
 
     def setCanal(self, can):
@@ -67,6 +67,6 @@ class TV:
         
     def setControl(self, contr: Control):
         self._control = contr
-    def getControl(self):
+    def getControl(self) -> Control:
         return self._control
     
