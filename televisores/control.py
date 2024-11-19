@@ -3,8 +3,8 @@ from __future__ import annotations
 
 class Control:
     def __init__(self):
-        #self._tv = None
-        pass
+        self._tv = None
+        
 
     def turnOn(self):
         self._tv.turnOn()
@@ -31,8 +31,8 @@ class Control:
         self._tv.setVolumen(volumen)
 
     def enlazar(self, tele):
-        self.setTv(tele)
-        self._tv.setControl(self)
+        self._tv = tele
+        tele.setControl(self)
 
     def setTv(self, tele: TV):
         self._tv = tele
