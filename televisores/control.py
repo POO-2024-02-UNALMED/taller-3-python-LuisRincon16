@@ -3,7 +3,7 @@ from __future__ import annotations
 
 class Control:
     def __init__(self):
-        self._tv = None
+        #self._tv = None
 
     def turnOn(self):
         self._tv.turnOn()
