@@ -11,7 +11,7 @@ class TV:
         self._precio = 500
         self._volumen = 1
         self._control: Control = None
-        TV.tvCreados()
+        TV._numTV = TV._numTV + 1
 
     @classmethod
     def setNumTV(cls, numTeles):
@@ -19,8 +19,8 @@ class TV:
 
 
     @classmethod
-    def tvCreados(cls):
-        cls._numTV = cls._numTV + 1
+    def getNumTV(cls):
+        return cls._numTV
 
     def turnOn(self):
         self._estado = True
