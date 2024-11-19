@@ -43,7 +43,7 @@ class TV:
         self.setVolumen(vol)
 
     def volumenDown(self):
-        vol = self.volumen - 1
+        vol = self._volumen - 1
         self.setVolumen(vol)
 
     def setMarca(self, marca: Marca):
